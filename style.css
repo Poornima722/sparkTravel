@@ -1,0 +1,158 @@
+*{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.navbar{
+    height:60px;
+    background-color: rgb(1, 37, 1);
+    color:antiquewhite;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+}
+body{
+    background-color: rgb(203, 240, 203);
+}
+.logo{
+    background-image: url("logo.jpg");
+    height:40px;
+    width:100px;
+    background-size: cover;
+    background-position: center;
+    margin-right: 100px;
+    margin-left: 20px;
+}
+.searchicon{
+    height:35px;
+    width:40px;
+    /* background-color: white; */
+    /* color: rgb(1, 37, 1); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(1, 37, 1);
+    background-color: rgb(203, 240, 203);
+    margin-right: 100px;
+}
+.searchbar{
+    display: flex;
+}
+.input{
+    height:30px;
+    width:500px;
+    color: rgb(1, 37, 1);
+    background-color: rgb(203, 240, 203);
+    font-size: 1rem;
+}
+#about{
+    margin-left: 20px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    color:rgb(203, 240, 203) ;
+    border-bottom: 1.5px solid transparent;
+}
+#about:hover{
+    border-bottom: 1.5px solid rgb(203, 240, 203);
+}
+.insta{
+    height:40px;
+    width:40px;
+    color: rgb(203, 240, 203);
+    background-color: rgb(1, 37, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 100px;
+}
+.fb{
+    height:40px;
+    width:40px;
+    color: rgb(203, 240, 203);
+    background-color: rgb(1, 37, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 15px;
+}
+.tweet{
+    height:40px;
+    width:40px;
+    color: rgb(203, 240, 203);
+    background-color: rgb(1, 37, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    margin-left: 15px;
+}
+.travelimg{
+    background-image: url("travelimg.jpg");
+    height:700px;
+    background-size: cover;
+    background-position: center;
+}
+H1{
+    margin-left: 100px;
+    font-size: 50px;
+    
+}
+p{
+    margin-left: 100px;
+    font-size: large;
+}
+#que{
+    border: 2px solid black;
+    height:60px;
+    width: 300px;
+    border-radius: 10px;
+}
+#que:hover{
+    background-color:rgb(203, 240, 203);
+    color:rgb(96, 195, 30);
+    bordeR:2px solid rgb(15, 32, 5);
+}
+.box{
+    height:250px;
+    width:250px;
+    border:2px solid rgb(203, 240, 203);
+    border-radius: 20px;
+    display:flex;
+    background-size: cover;
+    background-position: center;
+}
+.locations{
+    display: flex;
+    justify-content: space-evenly;
+}
+.locname{
+    display: flex;
+    justify-content: space-evenly;
+}
+.ln{
+    height:80px;
+    width:250px;
+    font-size: x-large;
+    font-weight: bold;
+    justify-content: space-evenly;
+}
+.ln{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fpanel{
+    height: 350px;
+    background-color: rgb(7, 82, 40);
+    color: rgb(203, 240, 203);
+    display: flex;
+    justify-content: center;
+}
+#h{
+    font-weight: bold;
+    /* font-size: 10px; */
+}
+
