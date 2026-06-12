@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPARK TRAVELS</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Sacramento&display=swap" rel="stylesheet">    <!--<meta name="viewport" content="width-device-width, initial-scale-1.0">-->
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <div class="logo"></div>
+            <button id="login-nav-btn" class="login-nav-btn">Login</button>
+            <div class="searchbar">
+                <input class="input" placeholder="Search destinations...">
+                <div class="searchicon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+            </div>
+
+            <div class="nav-actions">
+                <a href="about.html" id="about">About Us</a>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div id="welcome-banner" style="display: none; background: linear-gradient(135deg, rgb(203, 240, 203), rgb(1, 37, 1)); color: white; text-align: center; padding: 20px; font-size: 18px; font-weight: 500; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
+        Hi <span id="welcome-user-name" style="color: #00f1fe89; font-weight: bold;"></span>, welcome to Spark Travels! 🌍✈️
+        <a href="#" id="nav-logout-btn" style="color: #ff4d4d; font-weight: bold; margin-left: 20px; text-decoration: none; border-bottom: 2px dashed #ff4d4d; padding-bottom: 2px; transition: 0.3s;">Logout</a>
+    </div>
+    <div class="travelimg">
+        <div class="slider">
+            <div class="slide"><img src="img1.jpg"></div>
+            <div class="slide"><img src="img2.jpg"></div>
+            <div class="slide"><img src="img3.jpg"></div>
+            <div class="slide"><img src="img1.jpg"></div>
+        </div>
+
+        <div class="content">
+            <h1>Travel is the spark,</h1>
+            <h1>that lights up the soul</h1>
+        </div>
+    </div>
+    <section class="budget-planner">
+        <div class="planner-card">
+            <h2>Plan Your Spark</h2>
+            <p>Estimate your trip cost in seconds</p>
+            
+            <div class="planner-grid">
+                <div class="input-group">
+                    <label>From</label>
+                    <input type="text" id="start-loc" placeholder="Current City">
+                </div>
+                
+                <div class="input-group">
+                    <label>To</label>
+                    <input type="text" id="dest-loc" placeholder="Destination (e.g. Manali, Goa)">
+                </div>
+
+                <div class="input-group">
+                    <label>Travelers</label>
+                    <input type="number" id="travelers" min="1" value="1">
+                </div>
+
+                <div class="input-group">
+                    <label>Days</label>
+                    <input type="number" id="trip-days" min="1" value="3">
+                </div>
+
+                <div class="input-group">
+                    <label>Style</label>
+                    <select id="travel-style">
+                        <option value="1">Budget</option>
+                        <option value="1.5">Standard</option>
+                        <option value="3">Luxury</option>
+                    </select>
+                </div>
+            </div>
+
+            <button class="calc-btn" id="calc-budget-btn" onclick="calculateTripBudget()">Estimate Budget</button>
+
+            <div class="result-display">
+                <span id="total-estimate">₹0</span>
+                <p>Estimated Total</p>
+            </div>
+        </div>
+    </section>
+    <h1 class="section-title">RECOMMENDED DESTINATIONS</h1>
+    <br>
+    <div class="locations">
+        <div class="b1 box" style="background-image: url('taj.jpg');">
+            <div class="overlay">
+                <h3>Taj Mahal</h3>
+                <p>A symbol of love and one of the world's most iconic monuments.</p>
+                <a href="details.html?place=Agra" class="explore-btn">Explore</a>
+            </div>
+        </div>
+        <div class="b2 box" style="background-image: url('charminar.jpg');">
+            <div class="overlay">
+                <h3>India Gate</h3>
+                <p>The pride of India, where history, beauty, and vibrant city life come together.</p>
+                <a href="details.html?place=New Delhi" class="explore-btn">Explore</a>
+            </div>
+        </div>
+        <div class="b3 box" style="background-image: url('qm.jpg');">
+            <div class="overlay">
+                <h3>Qutub Minar</h3>
+                <p>A masterpeice of history and stunning architecture.</p>
+                <a href="details.html?place=New Delhi" class="explore-btn">Explore</a>
+            </div>
+        </div>
+        <div class="b4 box" style="background-image: url('mysore.jpg');">
+            <div class="overlay">
+                <h3>Mysuru Palace</h3>
+                <p>A royal grandeur where history shines in every detail.</p>
+                <a href="details.html?place=Mysuru" class="explore-btn">Explore</a>
+            </div>
+        </div>
+    </div>
+    <div class="locname">
+        <div class="taj ln">
+            <span id="s1">TajMahal</span>
+            <div class="line2">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="s2">Agra</span>
+            </div>
+        </div>
+        <div class="charminar ln">
+            <span id="s1">India Gate</span>
+            <div class="line2">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="s2">Delhi</span>
+            </div>
+        </div>
+        <div class="qm ln">
+            <span id="s1">Qutub Minar</span>
+            <div class="line2">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="s2">Delhi</span>
+            </div>
+        </div>
+        <div class="mp ln">
+            <span id="s1">Mysuru Palace</span>
+            <div class="line2">
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="s2">Karnataka</span>
+            </div>
+        </div>
+    </div>
+    <br>
+    <footer>
+        <div class="fpanel">
+            <div class="footer-brand">
+                <h3 id="h">SPARK TRAVELS</h3>
+                <p>Exploring the world, one soul at a time. We specialize in sustainable and local tourism across India.</p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-links">
+                <p id="h">Quick Links</p>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="#">Internships</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-newsletter">
+                <p id="h">Stay Inspired</p>
+                <p>Get travel tips and hidden gems delivered to your inbox.</p>
+                <div class="newsletter-input">
+                    <input type="email" placeholder="Your Email">
+                    <button>Join</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2026 Spark Travels. Built with pride in Bengaluru.</p>
+        </div>
+    </footer>
+    
+    <div id="auth-modal" class="modal-overlay">
+        <div class="modal-card">
+            <button id="close-modal-btn" class="close-btn">&times;</button>
+            
+            <div class="modal-tabs">
+                <button id="tab-login" class="tab-link active">Login</button>
+                <button id="tab-signup" class="tab-link">Sign Up</button>
+            </div>
+
+            <form id="auth-form">
+                <div class="input-group" id="username-group" style="display: none;">
+                    <label for="auth-username">Full Name</label>
+                    <input type="text" id="auth-username" placeholder="Enter your name">
+                </div>
+
+                <div class="input-group">
+                    <label for="auth-email">Email Address</label>
+                    <input type="email" id="auth-email" placeholder="name@example.com" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="auth-password">Password</label>
+                    <input type="password" id="auth-password" placeholder="••••••••" required>
+                </div>
+
+                <button type="submit" id="auth-submit-btn" class="submit-btn">Welcome Back</button>
+            </form>
+        </div>
+    </div>
+    <script src="index.js"></script>
+    <script src="budgetPlanner.js"></script>
+</body>
+</html>
