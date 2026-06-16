@@ -1,0 +1,168 @@
+/* ========================================================
+   🌟 SPARK TRAVELS DASHBOARD - WANDERLUST THEME 🌟
+   ======================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #06202B; /* 🌌 Dark Midnight Navy */
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* 🌅 HERO HEADER BANNER */
+.dashboard-hero {
+    background: linear-gradient(135deg, #06202B 0%, #077A7D 70%, #7AE2CF 100%);
+    padding: 60px 20px 40px 20px;
+    text-align: center;
+    border-bottom: 3px solid #7AE2CF;
+    position: relative;
+}
+
+.dashboard-hero h1 {
+    font-size: 36px;
+    color: #FDEB9E; /* ✨ Golden Glow Accent */
+    margin-bottom: 10px;
+    text-shadow: 0 2px 10px rgba(6, 32, 43, 0.5);
+}
+
+.dashboard-hero p {
+    font-size: 16px;
+    color: #e0f7f4;
+}
+
+.back-home-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: #FDEB9E;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+    transition: transform 0.2s ease;
+}
+
+.back-home-btn:hover {
+    transform: translateX(-3px);
+}
+
+/* 🎴 CARDS LAYOUT CONTAINER */
+.dashboard-container {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+/* 🗺️ THE ITINERARY CARD DESIGN */
+.trip-card {
+    background-color: rgba(7, 122, 125, 0.15); /* Soft deep teal glass card */
+    border: 1px solid rgba(122, 226, 207, 0.3); /* Aquamarine border */
+    border-radius: 12px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    box-shadow: 0 4px 15px rgba(6, 32, 43, 0.3);
+}
+
+.trip-card:hover {
+    transform: translateY(-6px);
+    border-color: #7AE2CF;
+    box-shadow: 0 10px 25px rgba(122, 226, 207, 0.2);
+    background-color: rgba(7, 122, 125, 0.25);
+}
+
+/* CARD DETAILS INSIDE */
+.card-route {
+    font-size: 20px;
+    font-weight: bold;
+    color: #FDEB9E; /* Golden Highlights */
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-details {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+    color: #e0f7f4;
+    font-size: 15px;
+}
+
+.card-details span {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-budget-badge {
+    background-color: #06202B;
+    border-left: 4px solid #7AE2CF;
+    padding: 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 16px;
+}
+
+.card-budget-badge em {
+    color: #7AE2CF;
+    font-style: normal;
+}
+
+/* 📭 EMPTY STATE VIEW */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: rgba(7, 122, 125, 0.08);
+    border: 2px dashed rgba(122, 226, 207, 0.2);
+    border-radius: 16px;
+    max-width: 600px;
+    margin: 40px auto;
+}
+
+.empty-icon {
+    font-size: 50px;
+    margin-bottom: 15px;
+}
+
+.empty-state h2 {
+    color: #FDEB9E;
+    margin-bottom: 10px;
+}
+
+.empty-state p {
+    color: #a3c7c4;
+    margin-bottom: 25px;
+}
+
+.explore-now-btn {
+    display: inline-block;
+    background-color: #7AE2CF;
+    color: #06202B;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 25px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.explore-now-btn:hover {
+    background-color: #FDEB9E;
+    transform: scale(1.05);
+}

@@ -78,13 +78,13 @@ if (authForm) {
         const isSignUpMode = document.getElementById('tab-signup').classList.contains('active');
 
         let formData = { email: email, password: password };
-        let targetUrl = 'http://localhost:3000/api/signup'; 
+        let targetUrl = 'http://127.0.0.1:3000/api/signup'; 
 
         if (isSignUpMode) {
-            targetUrl = 'http://localhost:3000/api/signup';
+            targetUrl = 'http://127.0.0.1:3000/api/signup';
             formData.name = document.getElementById('auth-username').value;
         } else {
-            targetUrl = 'http://localhost:3000/api/login'; 
+            targetUrl = 'http://127.0.0.1:3000/api/login'; 
         }
 
         try {
@@ -102,11 +102,17 @@ if (authForm) {
             // 👇 THIS NEW BLOCK REPLACES YOUR OLD IF-CONDITION 👇
             if (result.success) {
 
-                localStorage.setItem('sparkUser', JSON.stringify({ name: result.name, loggedIn: true }));
+                localStorage.setItem('sparkUser', JSON.stringify({ 
+                    name: result.name, 
+                    email: email, 
+                    loggedIn: true 
+                }));
                 // 1. Grab our UI elements from the HTML DOM
                 const loginBtn = document.getElementById('nav-login-btn');
                 const welcomeBanner = document.getElementById('welcome-banner');
                 const welcomeUserName = document.getElementById('welcome-user-name');
+
+                const favBtn = document.getElementById('nav-favorites-btn');
 
                 // 2. Extract the name sent by our MongoDB server response
                 const userName = result.name || "Traveler"; 
@@ -119,6 +125,7 @@ if (authForm) {
                 // 4. Smoothly shift the visibility states!
                 if (loginBtn) loginBtn.style.display = 'none'; // Make login button vanish
                 if (welcomeBanner) welcomeBanner.style.display = 'block'; // Make welcome section pop down
+                if (favBtn) favBtn.style.display = 'inline-block'; // Make favorites button appear
 
                 // 5. Close the popup modal overlay card gracefully
                 if (authModal) authModal.style.display = 'none'; 
@@ -148,12 +155,13 @@ window.addEventListener('DOMContentLoaded', () => {
             const loginBtn = document.getElementById('nav-login-btn');
             const welcomeBanner = document.getElementById('welcome-banner');
             const welcomeUserName = document.getElementById('welcome-user-name');
+            const favBtn = document.getElementById('nav-favorites-btn');
 
             // 4. Instantly alter the visibility states so it survives the refresh!
             if (welcomeUserName) welcomeUserName.textContent = savedUser.name;
             if (loginBtn) loginBtn.style.display = 'none';
             if (welcomeBanner) welcomeBanner.style.display = 'block';
-            
+            if (favBtn) favBtn.style.display = 'inline-block';
             console.log(`♻️ Session Restored for user: ${savedUser.name}`);
         }
     }
@@ -173,10 +181,12 @@ if (logoutBtn) {
         // 3. Grab the interface elements
         const loginBtn = document.getElementById('nav-login-btn');
         const welcomeBanner = document.getElementById('welcome-banner');
+        const favBtn = document.getElementById('nav-favorites-btn');
 
         // 4. Reverse the visibility states back to default!
         if (loginBtn) loginBtn.style.display = 'block'; // Bring back the Login button
         if (welcomeBanner) welcomeBanner.style.display = 'none'; // Make the welcome banner vanish
+        if (favBtn) favBtn.style.display = 'none'; // Make the favorites button vanish
 
         console.log("🚪 User logged out successfully. Session destroyed.");
         alert("Logged out successfully! See you on your next trip.");

@@ -20,6 +20,10 @@
                 </div>
             </div>
 
+            <button id="nav-favorites-btn" class="fav-nav-btn" style="display: none;" onclick="window.location.href='favorites.html'">
+                ✨ My Saved Sparks
+            </button>
+
             <div class="nav-actions">
                 <a href="about.html" id="about">About Us</a>
                 <div class="social-icons">
@@ -91,6 +95,14 @@
             </div>
         </div>
     </section>
+
+    <div id="favorites-container" style="margin-top: 20px;">
+        <button id="save-favorite-btn" class="btn-favorite">
+            ❤️ Save to Favorites
+        </button>
+        <p id="save-status-msg" style="margin-top: 10px; font-weight: bold;"></p>
+    </div>
+    
     <h1 class="section-title">RECOMMENDED DESTINATIONS</h1>
     <br>
     <div class="locations">
@@ -222,5 +234,6 @@
     </div>
     <script src="index.js"></script>
     <script src="budgetPlanner.js"></script>
+    <script src="save_fvrt.js"></script>
 </body>
 </html>

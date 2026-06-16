@@ -282,6 +282,53 @@ body{
     display: block;
 }
 
+/* CENTERED AND LARGER FAVORITES STYLING*/
+
+#favorites-container {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    
+    justify-content: center;
+    width: 100%;            
+}
+
+.btn-favorite {
+    background-color: rgb(4, 77, 66); 
+    color: white;
+    font-size: 20px;          
+    font-weight: bold;
+    padding: 20px 40px;       
+    border: none;
+    border-radius: 15px;      
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.1s ease, box-shadow 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    gap: 12px;                
+    box-shadow: 0 4px 15px rgba(255, 159, 67, 0.3); 
+}
+
+.btn-favorite:hover {
+    background-color: #6ee1ad; 
+    transform: translateY(-3px); 
+    box-shadow: 0 6px 20px rgba(238, 82, 83, 0.4);
+}
+
+.btn-favorite:active {
+    transform: translateY(-1px);
+}
+
+#save-status-msg {
+    font-size: 16px;         
+    margin-top: 15px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+    text-align: center;
+}
+
 .content {
     position: absolute;
     top: 50%; /* Moves it to the middle vertically */
@@ -636,4 +683,20 @@ footer {
 
 .login-nav-btn:hover {
     transform: scale(1.1);
+}
+
+.fav-nav-btn {
+    background-color: rgb(203, 240, 203);
+    color: rgb(1, 37, 1);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.fav-nav-btn:hover {
+    transform: scale(1.05);
 }

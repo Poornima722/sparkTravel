@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Saved Sparks | Spark Travels</title>
+    <link rel="stylesheet" href="favorites.css">
+</head>
+<body>
+
+    <header class="dashboard-hero">
+        <a href="index.html" class="back-home-btn">⬅️ Back to Exploring</a>
+        <h1>Your Saved Sparks</h1>
+        <p>Your curated collection of custom trip adventures</p>
+    </header>
+
+    <main class="dashboard-container">
+        <div id="no-favorites-msg" class="empty-state">
+            <div class="empty-icon">🗺️</div>
+            <h2>Your map is looking a little lonely!</h2>
+            <p>You haven't saved any custom itineraries yet. Head back to the planner to map out your next adventure.</p>
+            <a href="index.html" class="explore-now-btn">Start Planning Now</a>
+        </div>
+
+        <div id="favorites-grid" class="cards-grid"></div>
+    </main>
+
+    <script src="view_fvrt.js"></script>
+</body>
+</html>
